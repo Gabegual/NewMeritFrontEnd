@@ -7,6 +7,8 @@ import Landing from './components/Landing';
 import Footer from './components/footer';
 import Login from './components/Login'
 import AccountHoldersList from './components/AccountHolders'
+import SavingsAccount from './components/savingsaccount/savingsaccount'
+import CheckingAccount from './components/checkingaccount/checkingaccount'
 
 
 
@@ -25,6 +27,12 @@ function App() {
                     </Route>
                     <Route exact path="/accountholders">
                         <AccountHoldersList />
+                    </Route>
+                    <Route exact path="/savingaccount">
+                        <SavingsAccount />
+                    </Route>
+                    <Route exact path="/checkingaccount">
+                        <CheckingAccount />
                     </Route>
                 </Switch>
 
