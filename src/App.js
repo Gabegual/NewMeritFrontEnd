@@ -9,6 +9,8 @@ import Login from './components/Login'
 import AccountHoldersList from './components/AccountHolders'
 import SavingsAccount from './components/savingsaccount/savingsaccount'
 import CheckingAccount from './components/checkingaccount/checkingaccount'
+import savingsaccountpost from './components/savingsaccount/savingsaccountget';
+import SavingsAccountget from './components/savingsaccount/savingsaccountget';
 
 
 
@@ -34,8 +36,10 @@ function App() {
                     <Route exact path="/checkingaccount">
                         <CheckingAccount />
                     </Route>
+                    <Route exact path="/savingsaccountget">
+                        <SavingsAccountget />
+                    </Route>
                 </Switch>
-
                 <Footer />
             </Router>
         </div>
