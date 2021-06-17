@@ -3,16 +3,18 @@ import React, { useState } from 'react'
 function CheckingAccount() {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
+    const [balance, setBalance] = useState('')
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("FirstName: ", firstName, "lastname: ", lastName)
+        console.log("FirstName: ", firstName, "lastname: ", lastName, "Balance: ", balance)
     }
     return (
         <>
         <form onSubmit={handleSubmit}>
         <div className="container">
-            <h1>SavingsAccount</h1>
+            <h1>CheckingAccount OwO</h1>
         </div>
         <div className="container">
         <div class="input-group">

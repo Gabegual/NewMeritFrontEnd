@@ -1,56 +1,49 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import react from 'react';
+import react, {useState, useEffect} from 'react';
 import * as ReactBootStrap from 'react-bootstrap';
 
-const savingsaccountget = () => {
-const savinginfo = [
-    {AccountNumber: "1" , Balance: "100.00", InterestRate: "0.01", OpeningDate: "2021-06-14"}
-]
+const Savingsaccountget = () => {
 
-const renderInfo = (accountNumber, index) => {
-    return(
-        <tr key={index}>
-            <td>savinginfo.AccountNumber</td>
-            <td>savinginfo.Balance</td>
-            <td>savinginfo.InterestRate</td>
-            <td>savinginfo.OpeningDate</td>
-        </tr>
-    )
-}
+
+const [accountNumber, setAccountNumber] = useState('')
+const [Balance, setBalance] = useState('')
+const [interestRate, setInterestRate] = useState('')
+const [openingDate, setOpeningDate] = useState('')
+
+useEffect(
+    ()=>{
+        setAccountNumber ('1'),
+        setBalance ('100.00'),
+        setInterestRate ('0.01'), 
+        setOpeningDate ('2021/06/17')
+    }
+    );
+
 
     return(
       <div className="SAG">
           <ReactBootStrap.Table striped bordered hover>
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>AccountNumber</th>
+      <th>Balance</th>
+      <th>Interest Rate</th>
+      <th>Opening Date</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td colSpan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+   {
+       <tr>
+           <td>{accountNumber}</td>
+           <td>{Balance}</td>
+           <td>{interestRate}</td>
+           <td>{openingDate}</td>
+       </tr>
+   }
   </tbody>
 </ReactBootStrap.Table>
       </div>
     )
 }
 
-export default savingsaccountget
+export default Savingsaccountget
